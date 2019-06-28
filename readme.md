@@ -21,13 +21,13 @@ This repo contains a simple Spring Boot application that publishes Proemtheus-st
 - Build and push Docker image:
 
   ```
-  mvn -f app/pom.xml -Pjib package
+  mvn -f app/pom.xml package jib:build
   ```
 
-  Optionally, build to Docker daemon:
+- Build to Docker daemon:
 
   ```
-  mvn -f app/pom.xml -Pjib jib:dockerBuild
+  mvn -f app/pom.xml package jib:dockerBuild
   ```
 
 - Deploy to k8s:
