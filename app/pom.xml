@@ -54,14 +54,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-        </plugins>
-    </build>
-
-    <profiles>
-        <profile>
-            <id>jib</id>
-            <build>
-                <plugins>
                     <plugin>
                         <groupId>com.google.cloud.tools</groupId>
                         <artifactId>jib-maven-plugin</artifactId>
@@ -79,18 +71,8 @@
                                 </ports>
                             </container>-->
                         </configuration>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>build</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
+        </plugins>
+    </build>
 </project>
 
